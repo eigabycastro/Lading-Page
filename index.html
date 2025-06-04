@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BioSkin Patch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --verde-agua: #76d6cb;
+            --branco-neve: #ffffff;
+            --cinza-claro: #e6e6e6;
+            --azul-profundo: #003366;
+            --cinza-texto: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--azul-profundo);
+            background-color: var(--branco-neve);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(100deg, var(--verde-agua), var(--branco-neve));
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+        }
+
+        .frase {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .frase h2 {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .frase p {
+            font-size: 1.1rem;
+            color: var(--cinza-texto);
+            margin-bottom: 2rem;
+        }
+
+        .frase img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .vantagens {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            padding: 3rem 1.5rem;
+            background-color: #f9f9f9;
+
+        }
+
+        .van {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            max-width: 300px;
+            flex: 1 1 250px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .van:hover {
+            transition: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+
+        }
+
+        .van h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--azul-profundo);
+        }
+
+        .van p {
+            font-size: 0.95rem;
+            color: var(--cinza-texto);
+        }
+
+        .func {
+            padding: 3rem 1.5rem;
+            background-color: #f7fbfd;
+            text-align: center;
+        }
+
+        .func h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .func-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+        }
+
+        .func-card {
+            background-color: var(--branco-neve);
+            border: 1px solid var(--verde-agua);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 64, 128, 0.05);
+            padding: 1.5rem;
+            max-width: 280px;
+            flex: 1 1 240px;
+            transition: transform 0.3s ease;
+        }
+
+        .func-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .func-card h4 {
+            color: var(--azul-profundo);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .func-card p {
+            font-size: 0.95rem;
+            color: var(--cinza-texto);
+        }
+
+        .alvo {
+            padding: 3rem 1.5rem;
+        }
+
+        .alvo h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .pub-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .pub {
+            background: var(--branco-neve);
+            border: 2px solid var(--verde-agua);
+            border-radius: 16px;
+            padding: 1.5rem;
+            width: 200px;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 4px 10px var(--cinza-claro);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pub:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--cinza-claro);
+        }
+
+        .sobre {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .sobre h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .sobre p {
+            font-size: 1.05rem;
+            color: var(--cinza-texto);
+        }
+
+        footer {
+            padding: 1.5rem;
+            text-align: center;
+            background: var(--cinza-claro);
+            font-size: 0.9rem;
+        }
+
+        .cta {
+            margin-top: 2rem;
+            display: inline-block;
+            background: var(--azul-profundo);
+            color: white;
+            padding: 0.8rem 1.6rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .cta:hover {
+            background: #002244;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>BioSkin Patch</h1>
+    </header>
+
+    <div class="frase">
+        <h2>Sua saúde na palma da pele.</h2>
+        <p>Um adesivo inteligente e flexível que monitora sua saúde em tempo real e envia dados direto para o seu
+            celular.</p>
+        <img src="logo.jpeg" alt="BioSkin">
+    </div>
+
+    <section class="vantagens">
+        <div class="van">
+            <h3>Monitoramento contínuo</h3>
+            <p>Diferente dos dispositivos atuais que medem só em momentos específicos.</p>
+        </div>
+        <div class="van">
+            <h3>Não Invasivo</h3>
+            <p>Adesivo confortável, quase imperceptível, com tecnologia biocompatível.</p>
+        </div>
+        <div class="van">
+            <h3>Integração com Apps</h3>
+            <p>Gera dados para médicos, treinadores e pacientes, facilitando decisões rápidas.</p>
+        </div>
+        <div class="van">
+            <h3>Prevenção Ativa</h3>
+            <p>Detecta sinais precoces de doenças e condições crônicas.</p>
+        </div>
+        <div class="van">
+            <h3>Sustentável e descartável</h3>
+            <p>Feito de materiais biodegradáveis.</p>
+        </div>
+    </section>
+
+    <section class="func">
+        <h3>Funcionalidades</h3>
+        <div class="func-cards">
+            <div class="func-card">
+                <h4>📊 Sensores Inteligentes</h4>
+                <p>Monitora batimentos, glicose, temperatura, hidratação e cortisol em tempo real.</p>
+            </div>
+            <div class="func-card">
+                <h4>💊 Liberação de Medicamentos</h4>
+                <p>Adesivo com microfluídica que libera doses programadas conforme necessidade.</p>
+            </div>
+            <div class="func-card">
+                <h4>📡 Conectividade</h4>
+                <p>Bluetooth e Wi-Fi para enviar dados ao seu celular e apps de saúde.</p>
+            </div>
+            <div class="func-card">
+                <h4>🚨 Alertas Automáticos</h4>
+                <p>Envia sinais de emergência ao detectar problemas anormais no corpo.</p>
+            </div>
+            <div class="func-card">
+                <h4>📈 Histórico Detalhado</h4>
+                <p>Armazena seu histórico de saúde para médicos e usuários consultarem.</p>
+            </div>
+            <div class="func-card">
+                <h4>🔋 Autonomia de 7 Dias</h4>
+                <p>Funciona continuamente sem precisar de recarga por uma semana.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="alvo">
+        <h3>Público-alvo</h3>
+        <div class="pub-card">
+            <div class="pub">
+                <p>Pacientes com doenças crônicas.</p>
+            </div>
+            <div class="pub">
+                <p>Atletas e pessoas focadas em saúde preventiva.</p>
+            </div>
+            <div class="pub">
+                <p>Idosos que precisam de monitoramento constante.</p>
+            </div>
+            <div class="pub">
+                <p>Clínicas e hospitais para monitoramento remoto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre">
+        <h3>Tecnologia do Futuro</h3>
+        <p>Já em desenvolvimento com tecnologias de microfluídica, sensores biocompatíveis e IA, o BioSkin Patch é o
+            próximo passo em saúde inteligente. Troca simples, 7 dias de autonomia e um cuidado completo com você.</p>
+
+        <button type="submit" class="cta">Saiba Mais</button>
+    </section>
+
+    <footer>
+        <p>BioSkin @ Gabrielly e Vinicius</p>
+    </footer>
+</body>
+
+</html>
