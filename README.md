@@ -53,3 +53,12 @@ Pessoas que buscam maior controle e segurança sobre sua saúde diária.
 Por que vai realmente existir?
 Já existem pesquisas avançadas em sensores biocompatíveis, microfluídica para liberação controlada e conectividade IoT. 
 Empresas de tecnologia médica e startups investem pesado nesse tipo de solução. Nos próximos 3 a 5 anos, com a miniaturização, avanços em materiais e IA para análise dos dados, BioSkin Patch se tornará um produto acessível e revolucionário no cuidado à saúde.
+Apresentação do site:
+
+![image](https://github.com/user-attachments/assets/8a4cc794-23ff-4ef4-8ebe-97a2c7e5c366)
+![image](https://github.com/user-attachments/assets/579b1ab5-938b-4ce9-9ede-52a38f46f35b)
+![image](https://github.com/user-attachments/assets/06752083-9d7c-429e-8f99-c417a117a44c)
+
+Pagina de Cadastro:
+![image](https://github.com/user-attachments/assets/e7c8c159-8646-4f7d-abd9-987294ca99f5)
+
