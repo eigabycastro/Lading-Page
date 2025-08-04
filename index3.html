@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --verde-agua: #76d6cb;
+            --branco-neve: #ffffff;
+            --cinza-claro: #e6e6e6;
+            --azul-profundo: #003366;
+            --cinza-texto: #555;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--verde-agua), var(--branco-neve));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--azul-profundo);
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px #ffffffaa;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--azul-profundo);
+        }
+
+        input,
+        .seleção {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            background: #ffffffcc;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            outline: none;
+            background: #fff;
+            box-shadow: 0 0 5px var(--cinza-texto);
+        }
+
+        .radiog {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .radiog label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            color: var(--azul-profundo);
+            cursor: pointer;
+        }
+
+        .radiog input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            accent-color: var(--azul-profundo);
+            cursor: pointer;
+            margin: 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: var(--azul-profundo);
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: var(--verde-agua);
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--cinza-claro);
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <h1>Cadastrar-se</h1>
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" required placeholder="Digite seu nome completo">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" required>
+        <label>Gênero:</label>
+        <div class="radiog">
+            <label>
+                <input type="radio" name="genero" value="fem" id="fem">
+                Feminino
+            </label>
+            <label>
+                <input type="radio" name="genero" value="masc" id="masc">
+                Masculino
+            </label>
+            <label>
+                <input type="radio" name="genero" value="outro" id="outro">
+                Outro
+            </label>
+        </div>
+        <label for="opcoes">Selecione o seu interesse </label>
+        <select name="opcoes" id="opcoes" class="seleção">
+            <option value="sem">Selecione uma opção</option>
+            <option value="BioMax">Adesivo BioMax</option>
+            <option value="BioPro">Adesivo BioPro</option>
+            <option value="Biolight">Adesivo Biolight</option>
+        </select>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>
